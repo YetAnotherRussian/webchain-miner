@@ -24,6 +24,11 @@
 
 #include <stdint.h>
 
+ /* Blind compatibility with MSVC */
+#ifdef _MSC_VER
+#define __builtin_prefetch(x)
+#endif
+
 struct LYRA2_ctx;
 
 /* Blake2b IV Array */
